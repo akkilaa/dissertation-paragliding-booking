@@ -14,10 +14,12 @@ const HomePage = () => {
         <Container>
           <div className="places-content">
             {availablePlaces.map((place) => (
-              <div className="place-container">
-                <Image src={place.image} height={223} width={178} />
-                <div className="title">{place.title}</div>
-              </div>
+              <a href={`/places/${place.id}`} key={place.id}>
+                <div className="place-container">
+                  <Image src={place.image} height={223} width={178} />
+                  <div className="title">{place.title}</div>
+                </div>
+              </a>
             ))}
           </div>
         </Container>

@@ -1,0 +1,9 @@
+.flight-container {
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px 0px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+}
+.flight-item {
+    margin-bottom: 20px;
+}
