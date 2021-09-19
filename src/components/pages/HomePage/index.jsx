@@ -23,7 +23,6 @@ const HomePage = () => {
             ))}
           </div>
         </Container>
-        Zdravo svete
       </RegularLayout>
     </div>
   );

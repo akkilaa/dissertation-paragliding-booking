@@ -1,0 +1,8 @@
+.title-card-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.title-card-image {
+    margin-right: 20px;
+}

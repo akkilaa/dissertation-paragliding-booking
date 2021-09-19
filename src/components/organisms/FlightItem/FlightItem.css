@@ -1,9 +1,48 @@
 .flight-container {
     box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px 0px;
-    border-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     width: 100%;
     height: 100%;
 }
+
 .flight-item {
     margin-bottom: 20px;
+}
+.flight-title {
+    padding: 20px 0px 0px 20px;
+    color: #474b4e;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.flight-duration {
+    color: #727780;
+    padding: 10px 0px 0px 20px;
+}
+.flight-price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #727780;
+    padding: 95px 20px 0px 20px;
+}
+.flight-price-number {
+    font-size: 24px;
+    padding-left: 5px;
+}
+
+.flight-item-horizontal {
+    display: flex;
+    flex-direction: column;
+}
+.lower-active-col {
+    border-bottom: 4px outset greenyellow;
+    border-left: 4px outset greenyellow;
+    border-right: 4px outset greenyellow;
+}
+.upper-active-col {
+    border-top: 4px outset greenyellow;
+    border-left: 4px outset greenyellow;
+    border-right: 4px outset greenyellow;
 }

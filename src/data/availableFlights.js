@@ -83,7 +83,7 @@ export const availableParagliders = [
     price: 149,
     gallery: [],
     availabilty: 3,
-    time: "25 2021 10:53:57",
+    time: "25 2021 22:53:57",
   },
   {
     id: 2,
@@ -117,7 +117,7 @@ export const availableParagliders = [
     price: 125,
     gallery: [],
     availabilty: 3,
-    time: "25 2021 10:53:57",
+    time: "25 2021 22:53:57",
   },
   {
     id: 5,

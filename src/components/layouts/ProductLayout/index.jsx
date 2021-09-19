@@ -5,13 +5,29 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import FilterSidePanel from "../../organisms/FilterSidePanel";
 
-const ProductLayout = ({ children }) => {
+const ProductLayout = ({
+  children,
+  className,
+  filterText,
+  setFilterText,
+  filterPrice,
+  setFilterPrice,
+  durationText,
+  setDurationText,
+}) => {
   return (
-    <div>
+    <div className={className}>
       <Container>
         <Row>
-          <Col xs={3}>
-            <FilterSidePanel />
+          <Col xs={3} className="filters">
+            <FilterSidePanel
+              filterText={filterText}
+              setFilterText={setFilterText}
+              filterPrice={filterPrice}
+              setFilterPrice={setFilterPrice}
+              durationText={durationText}
+              setDurationText={setDurationText}
+            />
           </Col>
           <Col>{children}</Col>
         </Row>

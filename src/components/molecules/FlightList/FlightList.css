@@ -1,0 +1,6 @@
+.flights-container {
+    display: flex;
+}
+.flights-container.vertical {
+    flex-direction: column;
+}
