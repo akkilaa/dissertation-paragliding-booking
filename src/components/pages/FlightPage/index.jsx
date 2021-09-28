@@ -16,15 +16,43 @@ import moment from "moment";
 import TitleCard from "../../atoms/TitleCard";
 import { hostName } from "../../../constants/app-constants";
 import FlightList from "../../molecules/FlightList";
+import { useEffect, useState } from "react";
 
 const FlightPage = () => {
   let { flightID } = useParams();
   flightID = Number(flightID);
+
   console.log("flightID", flightID);
+
+  const changeState = (newState) => {
+    setState((prevState) => ({ ...prevState, ...newState }));
+  };
+
   const currentFlight =
     availableParagliders.find(
       (availableParaglider) => availableParaglider.id === flightID
     ) || {};
+
+  const flightsFromLocalStorage = JSON.parse(
+    localStorage.getItem("availableTrips")
+  );
+
+  let currentFlightInLocalStorage = {};
+
+  if (flightsFromLocalStorage) {
+    currentFlightInLocalStorage = flightsFromLocalStorage.find(
+      (flight) => flight.id === flightID
+    );
+  }
+
+  const [state, setState] = useState({
+    loading: false,
+    flightErrorMessage: "",
+    ticketAvailability: flightsFromLocalStorage
+      ? currentFlightInLocalStorage.availability
+      : currentFlight.availability,
+  });
+
   const currentFlightPlace = availablePlaces.find(
     (place) => place.id === currentFlight.placeID
   );
@@ -38,6 +66,54 @@ const FlightPage = () => {
     height: 60,
     objectFit: "contain",
   };
+
+  useEffect(() => {
+    if (!localStorage.getItem("availableTrips")) {
+      localStorage.setItem(
+        "availableTrips",
+        JSON.stringify(
+          availableParagliders.map((flight) => ({
+            id: flight.id,
+            placeID: flight.placeID,
+            availability: flight.availability,
+          }))
+        )
+      );
+    }
+  }, []);
+
+  const onFlightReserveClick = () => {
+    changeState({ loading: true, flightErrorMessage: "" });
+    const flights = JSON.parse(localStorage.getItem("availableTrips"));
+    console.log("flights before", flights);
+    const activeCurrentFlight = flights.find(
+      (flight) => flight.id === flightID
+    );
+    if (activeCurrentFlight.availability > 0) {
+      activeCurrentFlight.availability -= 1;
+      localStorage.setItem("availableTrips", JSON.stringify(flights));
+      setTimeout(() => {
+        changeState({
+          loading: false,
+          ticketAvailability: activeCurrentFlight.availability,
+        });
+        alert(
+          "Успешно сте резервисали карту, молимо проверите вашу маил адресу."
+        );
+      }, 3000);
+
+    } else {
+      setTimeout(
+        () =>
+          changeState({
+            loading: false,
+            flightErrorMessage: "Нема доступних карата.",
+          }),
+        3000
+      );
+    }
+  };
+
   return (
     <div className="flight-page">
       <RegularLayout>
@@ -82,7 +158,7 @@ const FlightPage = () => {
                   imageStyle={bigImageIconStyle}
                   image={`${hostName}images/icons/available.png`}
                 >
-                  <span>{currentFlight.availabilty}</span>
+                  <span>{state.ticketAvailability}</span>
                 </TitleCard>
                 <TitleCard
                   imageStyle={bigImageIconStyle}
@@ -92,7 +168,15 @@ const FlightPage = () => {
                 </TitleCard>
               </div>
               <div className="flight-reserve-button-wrapper">
-                <Button>Резервиши Лет</Button>
+                <Button onClick={onFlightReserveClick}>Резервиши Лет</Button>
+              </div>
+              {state.loading && (
+                <div className="flight-loading-container">
+                  <Image src={`${hostName}/images/loading.gif`} />
+                </div>
+              )}
+              <div className="flight-error-message">
+                {state.flightErrorMessage}
               </div>
             </Col>
           </Row>

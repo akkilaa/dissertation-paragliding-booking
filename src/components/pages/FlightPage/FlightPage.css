@@ -35,3 +35,17 @@
 .left-col .title-card-image {
     margin-bottom: 15px;
 }
+
+.flight-error-message {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    font-weight: 700;
+    color: red;
+}
+
+.flight-loading-container{
+    display: flex;
+    justify-content: center;
+    margin:20px 0px;
+}

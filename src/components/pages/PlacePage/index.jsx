@@ -10,7 +10,7 @@ import {
 import { useParams } from "react-router-dom";
 import ProductLayout from "../../layouts/ProductLayout";
 import FlightList from "../../molecules/FlightList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const PlacePage = () => {
   let { placeID } = useParams();
@@ -25,6 +25,21 @@ const PlacePage = () => {
   const [filterText, setFilterText] = useState("");
   const [filterPrice, setFilterPrice] = useState(400);
   const [durationText, setDurationText] = useState("");
+
+  useEffect(() => {
+    if (!localStorage.getItem("availableTrips")) {
+      localStorage.setItem(
+        "availableTrips",
+        JSON.stringify(
+          availableParagliders.map((flight) => ({
+            id: flight.id,
+            placeID: flight.placeID,
+            availability: flight.availability,
+          }))
+        )
+      );
+    }
+  }, []);
   return (
     <div>
       <RegularLayout>

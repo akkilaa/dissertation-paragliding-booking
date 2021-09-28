@@ -2,9 +2,27 @@ import RegularLayout from "../../layouts/RegularLayout";
 import "./HomePage.css";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
-import { availablePlaces } from "../../../data/availableFlights";
+import {
+  availablePlaces,
+  availableParagliders,
+} from "../../../data/availableFlights";
+import { useEffect } from "react";
 
 const HomePage = () => {
+  useEffect(() => {
+    if (!localStorage.getItem("availableTrips")) {
+      localStorage.setItem(
+        "availableTrips",
+        JSON.stringify(
+          availableParagliders.map((flight) => ({
+            id: flight.id,
+            placeID: flight.placeID,
+            availability: flight.availability,
+          }))
+        )
+      );
+    }
+  }, []);
   return (
     <div>
       <RegularLayout>

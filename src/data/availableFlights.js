@@ -82,7 +82,7 @@ export const availableParagliders = [
     duration: "10 - 15 Минута",
     price: 149,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "25 2021 22:53:57",
   },
   {
@@ -93,7 +93,7 @@ export const availableParagliders = [
     duration: "30 - 45 Минута",
     price: 115,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "26 2021 13:53:57",
   },
   {
@@ -104,7 +104,7 @@ export const availableParagliders = [
     duration: "25 - 30 Минута",
     price: 179,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "27 2021 15:53:57",
   },
 
@@ -116,7 +116,7 @@ export const availableParagliders = [
     duration: "30 - 45 Минута",
     price: 125,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "25 2021 22:53:57",
   },
   {
@@ -127,7 +127,7 @@ export const availableParagliders = [
     duration: "25 - 30 Минута",
     price: 149,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "26 2021 13:53:57",
   },
   {
@@ -138,7 +138,7 @@ export const availableParagliders = [
     duration: "10 - 15 Минута",
     price: 79,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "27 2021 15:53:57",
   },
 
@@ -150,7 +150,7 @@ export const availableParagliders = [
     duration: "25 - 30 Минута",
     price: 250,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "25 2021 10:53:57",
   },
   {
@@ -161,7 +161,7 @@ export const availableParagliders = [
     duration: "20 - 25 Минута",
     price: 140,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "26 2021 13:53:57",
   },
   {
@@ -172,7 +172,7 @@ export const availableParagliders = [
     duration: "10 - 15 Минута",
     price: 180,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "27 2021 15:53:57",
   },
 
@@ -184,7 +184,7 @@ export const availableParagliders = [
     duration: "25 - 30 Минута",
     price: 120,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "25 2021 10:53:57",
   },
   {
@@ -195,7 +195,7 @@ export const availableParagliders = [
     duration: "30 - 45 Минута",
     price: 190,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "26 2021 13:53:57",
   },
   {
@@ -206,7 +206,7 @@ export const availableParagliders = [
     duration: "20 - 25 Минута",
     price: 180,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "27 2021 15:53:57",
   },
 
@@ -218,7 +218,7 @@ export const availableParagliders = [
     duration: "25 - 30 Минута",
     price: 250,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "25 2021 10:53:57",
   },
   {
@@ -229,7 +229,7 @@ export const availableParagliders = [
     duration: "30 - 45 Минута",
     price: 130,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "26 2021 13:53:57",
   },
   {
@@ -240,7 +240,7 @@ export const availableParagliders = [
     duration: "10 - 15 Минута",
     price: 140,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "27 2021 15:53:57",
   },
 
@@ -252,7 +252,7 @@ export const availableParagliders = [
     duration: "20 - 25 Минута",
     price: 340,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "25 2021 10:53:57",
   },
   {
@@ -263,7 +263,7 @@ export const availableParagliders = [
     duration: "25 - 30 Минута",
     price: 90,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "26 2021 13:53:57",
   },
   {
@@ -274,7 +274,7 @@ export const availableParagliders = [
     duration: "",
     price: 79,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "27 2021 15:53:57",
   },
 
@@ -286,7 +286,7 @@ export const availableParagliders = [
     duration: "10 - 15 Минута",
     price: 140,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "25 2021 10:53:57",
   },
   {
@@ -297,7 +297,7 @@ export const availableParagliders = [
     duration: "10 - 15 Минута",
     price: 120,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "26 2021 13:53:57",
   },
   {
@@ -308,7 +308,7 @@ export const availableParagliders = [
     duration: "30 - 45 Минута",
     price: 190,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "27 2021 15:53:57",
   },
 
@@ -320,7 +320,7 @@ export const availableParagliders = [
     duration: "20 - 25 Минута",
     price: 250,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "25 2021 10:53:57",
   },
   {
@@ -331,7 +331,7 @@ export const availableParagliders = [
     duration: "25 - 30 Минута",
     price: 170,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "26 2021 13:53:57",
   },
   {
@@ -342,7 +342,7 @@ export const availableParagliders = [
     duration: "20 - 25 Минута",
     price: 160,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "27 2021 15:53:57",
   },
 
@@ -354,7 +354,7 @@ export const availableParagliders = [
     duration: "30 - 45 Минута",
     price: 90,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "25 2021 10:53:57",
   },
   {
@@ -365,7 +365,7 @@ export const availableParagliders = [
     duration: "25 - 30 Минута",
     price: 130,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "26 2021 13:53:57",
   },
   {
@@ -376,7 +376,7 @@ export const availableParagliders = [
     duration: "30 - 45 Минута",
     price: 140,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "27 2021 15:53:57",
   },
 
@@ -388,7 +388,7 @@ export const availableParagliders = [
     duration: "25 - 30 Минута",
     price: 130,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "25 2021 10:53:57",
   },
   {
@@ -399,7 +399,7 @@ export const availableParagliders = [
     duration: "30 - 45 Минута",
     price: 120,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "26 2021 13:53:57",
   },
   {
@@ -410,7 +410,7 @@ export const availableParagliders = [
     duration: "30 - 45 Минута",
     price: 90,
     gallery: [],
-    availabilty: 3,
+    availability: 3,
     time: "27 2021 15:53:57",
   },
 ];

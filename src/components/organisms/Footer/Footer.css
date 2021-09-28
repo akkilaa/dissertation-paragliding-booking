@@ -4,9 +4,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top:40px;
+    margin-top: 40px;
 }
 .footer-white-text {
     color: #ffffff;
     font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-logged-in-as {
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+    font-size: 20px;
+    border-right: 1px solid white;
 }
