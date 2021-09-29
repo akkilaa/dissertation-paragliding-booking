@@ -30,7 +30,7 @@ const LoginPage = () => {
       (user) =>
         user.username === state.username && user.password === state.password
     );
-    console.log("activeUser", activeUser);
+
     if (activeUser) {
       localStorage.setItem("activeUser", activeUser.id);
       history.push("/")  

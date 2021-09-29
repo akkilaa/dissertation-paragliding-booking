@@ -1,4 +1,8 @@
 import RegularLayout from "../../layouts/RegularLayout";
+import {
+  getRandomInt,
+  writeHistoryToLocalStorage,
+} from "../../../utils/data-utils";
 import "./FlightPage.css";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
@@ -10,7 +14,6 @@ import {
   availableParagliders,
   availablePlaces,
 } from "../../../data/availableFlights";
-import { getRandomInt } from "../../../utils/data-utils";
 import { useParams } from "react-router-dom";
 import moment from "moment";
 import TitleCard from "../../atoms/TitleCard";
@@ -21,8 +24,6 @@ import { useEffect, useState } from "react";
 const FlightPage = () => {
   let { flightID } = useParams();
   flightID = Number(flightID);
-
-  console.log("flightID", flightID);
 
   const changeState = (newState) => {
     setState((prevState) => ({ ...prevState, ...newState }));
@@ -84,24 +85,36 @@ const FlightPage = () => {
 
   const onFlightReserveClick = () => {
     changeState({ loading: true, flightErrorMessage: "" });
+
     const flights = JSON.parse(localStorage.getItem("availableTrips"));
-    console.log("flights before", flights);
+    const activeUser = localStorage.getItem("activeUser");
+
     const activeCurrentFlight = flights.find(
       (flight) => flight.id === flightID
     );
-    if (activeCurrentFlight.availability > 0) {
+
+    if (activeCurrentFlight.availability > 0 && activeUser) {
       activeCurrentFlight.availability -= 1;
+
       localStorage.setItem("availableTrips", JSON.stringify(flights));
+
+      writeHistoryToLocalStorage(activeCurrentFlight);
+
       setTimeout(() => {
         changeState({
           loading: false,
           ticketAvailability: activeCurrentFlight.availability,
         });
+
         alert(
           "Успешно сте резервисали карту, молимо проверите вашу маил адресу."
         );
       }, 3000);
-
+    } else if (!activeUser) {
+      changeState({
+        loading: false,
+        flightErrorMessage: "Морате се улоговати.",
+      });
     } else {
       setTimeout(
         () =>

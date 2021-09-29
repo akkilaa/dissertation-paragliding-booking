@@ -1,0 +1,8 @@
+.history-flights-title {
+    color: #474b4e;
+    font-size: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+}

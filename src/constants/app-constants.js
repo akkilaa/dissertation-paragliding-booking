@@ -1,2 +1,2 @@
-export const hostName = "http://localhost:5000/";
+export const hostName = "http://localhost:3000/";
 export default { hostName };

@@ -1,10 +1,7 @@
 import RegularLayout from "../../layouts/RegularLayout";
 import "./PlacePage.css";
-import Image from "react-bootstrap/Image";
-import moment from "moment";
 import {
   availableParagliders,
-  availablePlaces,
 } from "../../../data/availableFlights";
 
 import { useParams } from "react-router-dom";
@@ -14,14 +11,7 @@ import { useEffect, useState } from "react";
 
 const PlacePage = () => {
   let { placeID } = useParams();
-  console.log(
-    "routerParams",
-    placeID,
-    "\n\n",
-    moment().toString(),
-    "\n\n",
-    moment("Sep 10 2011 23:53:57").add(8, "days").toString()
-  );
+  
   const [filterText, setFilterText] = useState("");
   const [filterPrice, setFilterPrice] = useState(400);
   const [durationText, setDurationText] = useState("");
